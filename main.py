@@ -1,3 +1,6 @@
+from stats import word_count, char_count
+
+
 def main():
     book_report('books/frankenstein.txt')
 
@@ -10,17 +13,5 @@ def book_report(file_name):
             if 'a' <= char <= 'z':
                 print(f"The '{char}' character was found {count} times")
         print('--- End report ---')
-
-def word_count(content):
-    return len(content.split())
-
-def char_count(content):
-    chars = {}
-    for char in content.lower():
-        if char not in chars:
-            chars[char] = 1
-        else:
-            chars[char] += 1
-    return chars
 
 main()
